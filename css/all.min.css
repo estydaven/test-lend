@@ -703,6 +703,16 @@ button {
 .graph__line:last-child {
   margin-bottom: 0;
 }
+.graph__input {
+  width: 46px;
+  max-width: 100%;
+  display: inline-block;
+  border: 0;
+  font-family: 'Montserrat';
+  color: #6E544B;
+  font-size: 13px;
+  background-color: transparent;
+}
 .graph__months {
   display: flex;
   align-items: center;

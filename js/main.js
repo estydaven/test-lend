@@ -70,8 +70,22 @@ $('window').ready(function(){
         console.log($.cookie('wish'));
         body.removeClass('price-land').addClass('landing');
         $('input[value='+ $.cookie('price') +']').attr('checked', true);
+        $('input[value='+ $.cookie('pricee') +']').attr('checked', true);
+        
+        var weightValue = Number($.cookie("weight"));
+        $('input[name=weights]').val(weightValue);
+        var wishValue = Number($.cookie("wish"));
+        $('input[name=wishs]').val(wishValue);
+
+        var result = (weightValue - wishValue) * 0.25;
+        $('input[name=two]').val(Math.round(((weightValue - wishValue) - result + wishValue) * 10) / 10);
+        var valueTwo = $('input[name=two]').val();
+        var resultTwo = (valueTwo - wishValue) * 0.25;
+        $('input[name=three]').val(Math.round(((valueTwo - wishValue) - resultTwo + wishValue) * 10) / 10);
+        var valueThree = $('input[name=three]').val();
+        var resultThree = (valueThree - wishValue) * 0.25;
+        $('input[name=four]').val(Math.round(((valueThree - wishValue) - resultThree + wishValue) * 10) / 10);
     })
-    $('input[value='+ $.cookie('price') +']').attr('checked', true);
 
     if (!$.cookie('stop-timer')){
         initializeTimer();
