@@ -1382,10 +1382,10 @@ button {
   display: block;
   min-height: 100vh;
   height: 100%;
-  background-image: url(../images/hero-bg.png);
+  background-image: url(../images/icon/arr-bg.svg), url(../images/hero-bg.png);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: right top, center;
+  background-size: auto, cover;
 }
 .loading .wrapper_loading{display:block}
 .landing .wrapper_land {
@@ -1884,7 +1884,7 @@ button {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1908,13 +1908,13 @@ button {
   stroke-dashoffset: 301.59;
 }
 .questions__logo_price {
-  margin-bottom: 60px;
+  margin: 30px 0;
 }
 .price-wrap__subtitle {
   font-size: 14px;
   font-weight: 500;
   color: #EB4040;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-style: italic;
 }
 .price-wrap__inner {
@@ -1924,18 +1924,20 @@ button {
 .wrap-info {
   width: 100%;
   max-width: 70%;
+  z-index: 2;
 }
 .wrap-info__title {
   font-size: 26px;
   font-weight: 700;
   line-height: 37px;
   font-style: italic;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .price-wrap__image {
   position: absolute;
   right: -263px;
   top: -145px;
+  z-index: 1;
 }
 .wrap-info__num {
   font-size: 55px;
@@ -1944,7 +1946,7 @@ button {
   align-items: center;
   color: #EB4040;
   font-style: italic;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 .wrap-info__span {
   margin-left: 19px;
@@ -1960,10 +1962,14 @@ button {
   max-width: 670px;
 }
 .wrap-info__head {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 25px;
+}
+.text-green {
+  color: #C0B087;
+  font-size: 22px;
 }
 .wrap-info__text {
   font-size: 14px;
@@ -2280,6 +2286,9 @@ button {
   .program {
     padding: 25px 0;
   }
+  .price-wrap__image {
+    right: -333px;
+  }
 }
 @media (max-width: 900px) {
   .header {
@@ -2503,6 +2512,17 @@ button {
   .quest-block__image {
     border-radius: 30px;
   }
+  .load-block {
+    background-size: 100%;
+  }
+  .wrap-info {
+    max-width: 80%;
+  }
+  .price-wrap__image {
+    right: -200px;
+    top: 236px;
+    width: 63%;
+  }
 }
 @media (max-width: 650px) {
   .mistakes__inner {
@@ -2699,6 +2719,92 @@ button {
     display: flex;
     justify-content: center;
     width: 34%;
+  }
+  .progress {
+    border-radius: 30px;
+    width: 127px;
+    height: 127px;
+  }
+  .progress-bar {
+    width: 77px;
+  }
+  .progress-container span {
+    font-size: 40px;
+  }
+  .load-block {
+    padding-top: 32px;
+  }
+  .load-block__text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+  .wrap-info {
+    max-width: 100%;
+  }
+  .price-wrap__inner {
+    flex-direction: column;
+  }
+  .price-wrap__image {
+    right: 0;
+    top: 0;
+    position: relative;
+    width: 388px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .questions__logo_price {
+    margin: 15px 0;
+  }
+  .price-wrap__subtitle {
+    margin-bottom: 10px;
+  }
+  .wrap-info__title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .wrap-info__num {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .wrap-info__span {
+    font-size: 11px;
+  }
+  .wrap-info__head {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .text-green {
+    font-size: 20px;
+  }
+  .wrap-info__text {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .offer__subtitle {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .price__inner_offer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .price-all__btns {
+    margin-bottom: 15px;
+  }
+  .price-btns__label_price {
+    margin-right: 20px;
+  }
+  .price-land .wrapper_price {
+    background-size: 0, cover;
+  }
+  .wrap-info__text {
+    line-height: 16px;
+  }
+  .offer {
+    padding-bottom: 0;
   }
 }
 @media (max-width: 580px) {
@@ -3273,6 +3379,22 @@ button {
   }
   .quest__variants_addict {
     column-gap: 0;
+  }
+  .wrap-info__num {
+    font-size: 35px;
+  }
+  .wrap-info__title {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .price-wrap__subtitle {
+    font-size: 11px;
+  }
+  .questions__logo_price {
+    margin: 5px 0;
+  }
+  .logo_price {
+    width: 120px;
   }
 }
 @media (max-width: 320px) {

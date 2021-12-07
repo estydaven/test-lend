@@ -1,17 +1,17 @@
-// (function() {
-//     'use strict';
+(function() {
+    'use strict';
   
-//     function backToTop() {
-//       if (window.pageYOffset > 0) {
-//         window.scrollBy(0, -80);
-//         setTimeout(backToTop, 0);
-//       }
-//     }
+    function backToTop() {
+      if (window.pageYOffset > 0) {
+        window.scrollBy(0, -80);
+        setTimeout(backToTop, 0);
+      }
+    }
   
-//     var goTopBtn = document.querySelector('.btn-top');
+    var goTopBtn = document.querySelector('.btn-top');
   
-//     goTopBtn.addEventListener('click', backToTop);
-// })();
+    goTopBtn.addEventListener('click', backToTop);
+})();
 
 $('window').ready(function(){
     let stepInput = $('.quest__one input'),
@@ -47,8 +47,8 @@ $('window').ready(function(){
         if (activeQuest.hasClass('quest__one_final')){
             body.removeClass('quest-page').addClass('loading');
             animateProgress();
-            $('.wrapper_quest').hide(300);
-            setTimeout(openPrice, 6300);
+            $('.wrapper_quest').hide(100);
+            setTimeout(openPrice, 2000);
         }
     }
     function openPrice(){
@@ -62,8 +62,12 @@ $('window').ready(function(){
     $('.price__inner_offer').on('submit', function(e){
         e.preventDefault();
         $.cookie('price', $('input[name="price"]:checked').val());
+        $.cookie('weight', $('input[name="weight"]').val());
+        $.cookie('wish', $('input[name="wish"]').val());
         $.cookie('visited', true);
         console.log($.cookie('price'));
+        console.log($.cookie('weight'));
+        console.log($.cookie('wish'));
         body.removeClass('price-land').addClass('landing');
         $('input[value='+ $.cookie('price') +']').attr('checked', true);
     })
