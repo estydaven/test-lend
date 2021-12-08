@@ -767,7 +767,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
-  row-gap: 111px;
 }
 .mistake {
   width: calc(100% / 2 - 30px);
@@ -780,6 +779,12 @@ button {
   font-style: italic;
   line-height: 22px;
   text-align: center;
+}
+.mistake_one {
+  margin-bottom: 111px;
+}
+.mistake_two {
+  margin-bottom: 111px;
 }
 .mistake__inner{
   display: flex;
@@ -1907,15 +1912,23 @@ button {
 .progress-bar {
   transform: rotate(-90deg);
 }
-.progress-bar circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1.5s ease-in-out;
-  transition-delay: 1s;
-  stroke: hsl(255, 0.0%, 100.0%, 0.1);
+.loading .progress-value {
+	animation: progress 5s forwards linear;
 }
-.progress-bar .progress-value {
-  stroke: hsl(var(--hue), 81.0%, 58.6%);
-  stroke-dashoffset: 301.59;
+.progress-bar {
+	transition: 0.3s;
+	transform: rotate(-90deg);
+}
+.progress-bar .progress-value{
+	stroke: #EB4040;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+}
+@keyframes progress {
+	0% {}
+	100% {
+		stroke-dashoffset: 0;
+	}
 }
 .questions__logo_price {
   margin: 30px 0;
@@ -2815,6 +2828,12 @@ button {
   }
   .offer {
     padding-bottom: 0;
+  }
+  .mistake_one {
+    margin-bottom: 0;
+  }
+  .mistake_two {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 580px) {
