@@ -212,7 +212,7 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-$('.reviews__slider').slick({
+$('.result').slick({
     dots: true,
     arrows: true,
     infinite: true,
@@ -220,10 +220,10 @@ $('.reviews__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
-    prevArrow: '<button type="button" class="reviews__slider__bottom reviews__slider__bottom_prev"></button>',
-    nextArrow: '<button type="button" class="reviews__slider__bottom reviews__slider__bottom_next"></button>',
+    prevArrow: '<button type="button" class="result__slider__bottom result__slider__bottom_prev"></button>',
+    nextArrow: '<button type="button" class="result__slider__bottom result__slider__bottom_next"></button>',
     dotsClass: 'reviews__slider__dots'
-});
+});  
 $(window).on('load resize', function() {
     if (window.innerWidth < 651) { 
         $('.advantages').slick({
@@ -250,17 +250,5 @@ $(window).on('load resize', function() {
             nextArrow: '<button type="button" class="advantages__slider__bottom advantages__slider__bottom_next"></button>',
             dotsClass: 'reviews__slider__dots'
         });  
-        $('.result').slick({
-            dots: true,
-            arrows: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            variableWidth: true,
-            prevArrow: '<button type="button" class="result__slider__bottom result__slider__bottom_prev"></button>',
-            nextArrow: '<button type="button" class="result__slider__bottom result__slider__bottom_next"></button>',
-            dotsClass: 'reviews__slider__dots reviews__slider__dots_result'
-        });   
-    }
+     }
 });
